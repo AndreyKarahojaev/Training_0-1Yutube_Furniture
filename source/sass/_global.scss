@@ -5,6 +5,7 @@
 html,
 body {
 	height: 100%;
+  overflow-x:  hidden;
 }
 
 .content-wrapper {
@@ -51,4 +52,27 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  li{
+    margin: 0 15px;
+  }
+  button {
+    background-color: $color-fon;
+    border: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 0;
+  }
+  li.slick-active {
+    button{
+      background-color:$color-specialActive;
+    }
+  }  
 }
