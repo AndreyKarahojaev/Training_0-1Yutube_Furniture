@@ -13,6 +13,14 @@ $(function () {
     autoplay:true,
     autoplaySpeed: 2000,
     });
+
+    var mixer = mixitup('.gallery__inner', {
+        load: {
+            filter: '.category-livingRoom'
+        }
+    });
 })
+
+
 
 

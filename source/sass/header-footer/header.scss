@@ -142,8 +142,8 @@
 // }
 
 .rightside-menu--close {
-    // display: none;
-    transform: translateX(100%);
+    display: none;
+    // transform: translateX(100%);
 }
 
 .rightside-menu__content {
@@ -158,7 +158,7 @@
         position: relative;
         @extend %title-font;
         font-size: $font-sizeHuge;
-        color: $color-fon;
+        color: $color-title;
         line-height: 51px;
         padding-bottom: 15px;
         margin-bottom: 20px;

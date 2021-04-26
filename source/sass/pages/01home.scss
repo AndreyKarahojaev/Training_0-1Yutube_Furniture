@@ -1,5 +1,6 @@
+// первый блок - page-home
+// главная страница основной контент
 .page-home {
-    outline: none;
     &__inner {
         padding-bottom: 70px;
         position: relative;
@@ -12,10 +13,6 @@
             top: 0;
             z-index: -1;
         }
-    }
-
-    &__slider {
-        outline: none;
     }
 
     &__slider-item{
@@ -42,22 +39,304 @@
         position: relative;
         @extend %title-font;
         font-size: $font-sizeSpecial;
-        color:$color-fon;
+        color: $color-title;
         line-height: 135px;
         padding-bottom: 26px;
         margin-bottom: 26px;
         &::after{
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
+            @extend %line_after;
             width: 185px;
-            height: 1px;
-            background-color: $color-specialLine;
         }
     }
 
     &__text {
         max-width: 585px;
+    }
+}
+//второй блок new-collection
+
+.new-collection {
+    text-align: center;
+    padding: 45px 0 0; 
+    &__title {
+       @extend %title-font;
+       line-height: 51px;
+       font-size: $font-sizeHuge;
+       color: $color-title;
+       padding-bottom: 25px;
+       margin-bottom: 25px;
+       position: relative;
+       &::after {
+        @extend %line_after;
+        width: 250px;
+        margin: 0 auto;
+       } 
+    }
+    &__text {
+        max-width: 730px;
+        margin: 0 auto 30px;
+    }
+}
+//.collection
+@import './import/new-collection.scss';
+// третий блок - decor
+.decor {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 616px;
+    margin-top: 34px;
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background-color: $color-white;
+
+        max-width: 2640px;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        position: relative;
+        @extend %title-font;
+        font-size: $font-sizeGiant;
+        color: $color-title;
+        line-height: 80px;
+        z-index: 2;
+        opacity: 1;
+        &::after{
+            @extend %line_after;
+            width: 200px;
+        }
+    }
+
+    &__text{
+        color: $color-text;
+        line-height: 28px;
+        z-index: 2;
+        font-weight: 900;
+    }
+}
+
+.decor-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    padding-top: 172px;
+    max-width: 700px;
+}
+// четвертый блок - work-path
+.work-path {
+    padding: 50px 0 30px;
+
+    &__items{
+        padding-top: 30px;
+    }
+
+    &__title {
+        text-align: center;
+        @extend %title-font;
+        font-size: $font-sizeHuge;
+        line-height: 51px;
+        color: $color-title;
+    }
+
+    &__items-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__items-box--top {
+        border-bottom: 2px solid rgba($color-fon, 0.7);
+        position: relative;
+        padding-bottom: 10px;
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-fon;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -5px;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $color-fon;
+
+        }
+    }
+
+    &__items-box--bottom {
+        position: relative;
+        padding-top: 20px;
+        &::before {
+            position: absolute;
+            content: '';
+            right: 48%;
+            top: -10px;
+            width: 20px;
+            height: 2px;
+            background-color: $color-fon;
+            transform: rotate(90deg)
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            left: 24%;
+            top: 10px;
+            width: 20px;
+            height: 2px;
+            background-color: $color-fon;
+            transform: rotate(90deg)
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: flex-start;
+        position: relative;
+        width: 250px;
+    }
+
+    &__item--measure {
+        margin-left: 25%;
+    }
+
+    &__item--product {
+        margin-right: 25%;
+    }
+
+    &__item-title {
+        text-align: center;
+        color: $color-title;
+        line-height: 23px;
+    }
+
+    &__item-text{
+        text-align: left;
+        color: $color-text;
+        line-height: 27px;
+        padding-top: 14px;
+    }
+
+    &__item-text--delevery{
+        text-align: right;
+    }
+
+    &__item-img {
+        padding: 5px 10px 5px 5px;
+    }
+
+}
+// пятый блок gallery
+@import './import/gallery.scss';
+// шестой блок aside 
+.home-blog {
+    display: flex;
+    padding-bottom: 100px;
+
+    &__title {
+        @extend %title-font;
+        line-height: 51px;
+        font-size: $font-sizeHuge;
+        text-align: center;
+        padding-bottom: 5px;
+        width: 430px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    &__items { 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content;
+        grid-gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img-link {
+        position: relative;
+        margin-bottom: 15px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__links {
+        font-size: $font-sizeSmall;
+        color: $color-textSign;
+        line-height: 28px;
+        font-weight: 600;
+    }
+
+    &__date {
+        color: inherit;
+        &:hover,
+        &:active {
+            color: $color-black;
+        }
+    }
+
+    &__author {
+        color: inherit;
+
+        padding-left: 4px;
+        padding-right: 4px;
+
+        margin-left: 4px;
+        margin-right: 4px;
+
+        border-left: 1px solid $color-textSign;
+        border-right: 1px solid $color-textSign;
+        &:hover,
+        &:active {
+            color: $color-black;
+        }
+    }
+
+    &__theme {
+        color: inherit;
+        &:hover,
+        &:active {
+            color: $color-black;
+        }
+    }
+
+    &__item-title-link {
+        margin-top: 7px;
+    }
+
+    &__item-title {
+        @extend %title-font;
+        font-size: $font-sizeLarge;
+        line-height: 38px;
     }
 }

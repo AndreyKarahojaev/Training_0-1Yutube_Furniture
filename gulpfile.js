@@ -26,6 +26,8 @@ function scripts() {
     return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'source/js/script.js'
     ])
     .pipe(concat('script.min.js'))

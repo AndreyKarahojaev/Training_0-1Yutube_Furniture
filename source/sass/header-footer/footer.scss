@@ -48,7 +48,7 @@
 
     &-title{
         @extend %title-font;
-        color: $color-fon;
+        color: $color-title;
         margin-bottom: 14px;
         line-height: 23px;
     }
@@ -62,7 +62,7 @@
     &-email {
         display: inline-block;
         font-size: $font-sizeSmall;
-        color: $color-fon;
+        color: $color-title;
         font-weight: 600;
         margin-bottom: 22px;
         padding-left: 30px;
@@ -70,7 +70,7 @@
         &::before {
             position: absolute;
             content: '';
-            background-image: url('../img/envelope.svg');
+            background-image: url('../img/icon/envelope.svg');
             background-repeat: no-repeat;
             top: 9px;
             left: 0;
@@ -106,19 +106,19 @@
         }
 
         &--Facebook::before {
-            background-image: url('../img/facebook.svg');
+            background-image: url('../img/icon/facebook.svg');
         }
         &--Instagram::before {
-            background-image: url('../img/instagram.svg');
+            background-image: url('../img/icon/instagram.svg');
         }
         &--Pinterest::before {
-            background-image: url('../img/Pinterest.svg');
+            background-image: url('../img/icon/Pinterest.svg');
         }
         &--WhatsApp::before {
-            background-image: url('../img/whatsapp.svg');
+            background-image: url('../img/icon/whatsapp.svg');
         }
         &--Youtube::before {
-            background-image: url('../img/youtube.svg');
+            background-image: url('../img/icon/youtube.svg');
         }
         
     }
@@ -141,7 +141,7 @@
 
 .footer__copyright {
     width: 100%;
-    background-color: $color-fon;
+    background-color: $color-title;
    
    &-text{
        text-align: center;
