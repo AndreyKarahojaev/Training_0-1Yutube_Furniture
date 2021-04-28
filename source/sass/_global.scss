@@ -30,7 +30,7 @@ body {
   padding: 0 15px;
 }
 
-.container-fluild {
+.container-fluid {
   max-width: 1920px;
   padding: 0 10px;
   margin: 0 auto;
@@ -94,7 +94,7 @@ body {
 
 .breadcrumbs {
   background-color: rgba($color-backgroundFooter, 0.5);
-
+  z-index: 10;
   padding-top: 14px;
   padding-bottom: 14px;
 
@@ -122,3 +122,15 @@ body {
   }
 }
 
+.button {
+  text-align: center;
+  font-weight: 600;
+  color: #FFFFF0;
+  background-color: $color-fon;
+  
+  border:none;
+  border-radius: 21px;
+  padding: 6px 12px;
+  margin-left: 9px;
+  cursor: pointer;
+}

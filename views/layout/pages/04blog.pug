@@ -1,3 +1,51 @@
 extends ../extends/basis
 block unique-content 
-    p дддд
+    .breadcrumbs    
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="#") Home
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href="#") Blog 
+    section.blog
+        .container 
+            .blog__inner 
+                .blog__items
+                    .blog__item
+                        img.blog__item-img(src="img/blog/blog-item1.jpg", alt="Превью")
+                        .blog__item-info
+                            span.blog__item-date August 15, 2020 
+                            a.info__author(href="#") by Ann Summers 
+                            a(href="#").blog__item-theme Bedroom Furniture
+                            h3.blog__item-title Red selfies edison bulb four dollar toast humblebrag for the furniture
+                            p.blog__item-text Everyday carry actually neutra authentic kogi shabby chic migas small batch craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table
+                    blockquote.blog__blockquote “Simplicity is not the goal. It is the by-product of a good idea and modest expectations” 
+                        span.blog__blockquote-author Paul Rand
+                    .blog__item.artivle-pupup
+                        .artivle-pupup__box
+                            a.blog__item-link(href="https://youtu.be/Nxg6UfofZX0?t=34603" data-fancybox)
+                                img.blog__item-img(src="img/play-button.svg", alt="")
+                        .blog__item-info
+                            span.blog__item-date August 12, 2020
+                            a.info__author(href="#") by Lux Morningstar
+                            a(href="#").blog__item-theme Design
+                            h3.blog__item-title Authentic kogi shabby chic
+                    .blog__item.blog-slider.artivle-slider
+                        .artivle-slider__box
+                            img.artivle-slider__img(src="img/blog/slider-img.jpg", alt="Превью")
+                            img.artivle-slider__img(src="img/blog/slider-img2.jpg", alt="Превью")
+                            img.artivle-slider__img(src="img/blog/slider-img3.jpg", alt="Превью")
+                        .blog__item-info
+                            span.blog__item-date August 18, 2020
+                            a.info__author(href="#") by Ann Summers 
+                            a(href="#").blog__item-theme Table Furniture
+                            h3.blog__item-title Semiotics fixie four dollar toast, next level woke
+                            p.blog__item-text Everyday carry actually neutra authentic kogi shabby chic migas small batch craft beer. Literally williamsburg tote bag farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug selvage hammock palo santo godard thundercats coloring book yuccie woke. Ugh pok pok taxidermy pabst enamel pin edison bulb farm-to-table
+                    .pagination
+                        a.pagination__arrow-link 
+                        ul.pagination-list
+                            li.pagination-list__item
+                                a.pagination-list__item-link.pagination-list__num.pagination-list__num--active(href="#") 1
+                            li.pagination-list__item
+                        a.pagination__arrow-link 
+                include ../include/blog-aside.pug

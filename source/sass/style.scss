@@ -3,11 +3,19 @@
 @import 'reset';
 @import 'libs';
 @import 'global';
+
+@import './import/new-collection.scss';
+@import './import/gallery.scss';
+@import './import/blog-aside.scss';
+
 @import './header-footer/header.scss';
 @import './header-footer/footer.scss';
+
 @import './pages/01home.scss';
 @import './pages/02about.scss';
 @import './pages/03gallery.scss';
+@import './pages/04blog.scss';
+@import './pages/05contact.scss';
 
 
 

@@ -1,0 +1,18 @@
+.blog {
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 58px;
+    }
+
+}
+
+.artivle-pupup__box {
+    width: 729px;
+    height: 415px;
+    background-image: url('../img/blog/blog-item2.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
